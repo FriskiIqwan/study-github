@@ -14,11 +14,11 @@ jobs:
       - name: List Files
         run: |
           ls -la
-      - name: Download/Clone Repository 
+      - name: Clone Repository
         uses: actions/checkout@v4
-      - name: List Files Again
+      - name: List Files After Cloning
         run: |
-          ls -la 
+          ls -la
 
   build: 
     name: Build Application
