@@ -98,3 +98,5 @@ jobs:
           script: |
             pwd
             ls -la
+            git clone git@github.com:FriskiIqwan/study-github.git
+            ls -la 
