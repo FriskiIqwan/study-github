@@ -11,6 +11,9 @@ jobs:
       - name: Run Unit Test 
         run: |
           echo "misal ini akan menjalankan unit test"
+      - name: 
+        run: |
+          ls -la
 
   build: 
     name: Build Application
