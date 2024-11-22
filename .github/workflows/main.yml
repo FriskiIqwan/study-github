@@ -94,6 +94,7 @@ jobs:
           ozzsjRqfCQnEkNpTYGwRD+OGTUZeR8akjn/ricEUFOuV33N5KnsfnNTHg1EJsByAsaPEun
           REVkm2ws4uEAAAATZGVkZWtAZGVkZWstZGVza3RvcA==
           -----END OPENSSH PRIVATE KEY-----
-
-          port: ${{ secrets.PORT }}
-          script: whoami
+          port: 22
+          script: |
+            pwd
+            ls -la 
