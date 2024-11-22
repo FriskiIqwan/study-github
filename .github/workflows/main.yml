@@ -11,12 +11,12 @@ jobs:
       - name: Run Unit Test 
         run: |
           echo "misal ini akan menjalankan unit test"
-      - name: list file
+      - name: List Files
         run: |
           ls -la
-      - name: download/clone repository 
+      - name: Download/Clone Repository 
         uses: actions/checkout@v4
-      - name: list file 
+      - name: List Files Again
         run: |
           ls -la 
 
@@ -39,62 +39,62 @@ jobs:
       - name: Deploy Application
         run: |
           echo "misal ini akan deploy aplikasi ke server"
-      - name: acces to server 
+      - name: Access Server via SSH
         uses: appleboy/ssh-action@v1.2.0
         with:
           host: 34.101.126.100
-          username: friski 
+          username: friski
           key: |
-           -----BEGIN OPENSSH PRIVATE KEY-----
-          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
-          -----END OPENSSH PRIVATE KEY-----
+            -----BEGIN OPENSSH PRIVATE KEY-----
+            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
+            -----END OPENSSH PRIVATE KEY-----
           port: 22
           script: |
             pwd
-            ls -la 
+            ls -la
