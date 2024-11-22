@@ -47,9 +47,15 @@ jobs:
           key: ${{ secrets.KEY }}
           port: 22
           script: |
+            echo "Navigating to server directory..."
             pwd
+            echo "Listing files..."
             ls -la
-            rm -rf study-github
-            git clone git@github.com:FriskiIqwan/study-github.git
-            ls -la 
-            sudo cp -r study-github/* /var/www/html
+            echo "Removing old repository..."
+            rm -rf study-github || echo "No previous repository to remove."
+            echo "Cloning repository from GitHub..."
+            git clone git@github.com:FriskiIqwan/study-github.git || { echo "Failed to clone repository"; exit 1; }
+            echo "Files after cloning:"
+            ls -la
+            echo "Copying files to /var/www/html"
+            sudo cp -r study-github/* /var/www/html || { echo "Failed to copy files"; exit 1; }
