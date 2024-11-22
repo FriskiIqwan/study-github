@@ -43,7 +43,7 @@ jobs:
         uses: appleboy/ssh-action@v1.2.0
         with:
           host: 34.101.126.100
-          username: friski
+          username: dedek
           key: |
             -----BEGIN OPENSSH PRIVATE KEY-----
             b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAACFwAAAAdzc2gtcn
