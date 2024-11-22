@@ -7,8 +7,6 @@ jobs:
   test: 
     name: Run Unit Test
     runs-on: ubuntu-22.04
-    needs: 
-      - test
     steps: 
       - name: Run Unit Test 
         run: |
@@ -18,7 +16,7 @@ jobs:
     name: Build Application
     runs-on: ubuntu-22.04
     needs: 
-      - build
+      - test
     steps: 
       - name: Build Application 
         run: |
@@ -27,6 +25,8 @@ jobs:
   deploy: 
     name: Deploy Application
     runs-on: ubuntu-22.04
+    needs: 
+      - build
     steps: 
       - name: Deploy Application
         run: |
