@@ -11,9 +11,11 @@ jobs:
       - name: Run Unit Test 
         run: |
           echo "misal ini akan menjalankan unit test"
-      - name: 
+      - name: list file
         run: |
           ls -la
+      - name: download/clone repository 
+        uses: actions/checkout@v4
 
   build: 
     name: Build Application
